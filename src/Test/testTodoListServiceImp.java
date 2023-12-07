@@ -1,22 +1,15 @@
 package Test;
 
-import Domain.Categories;
-import Repository.TodoListRepositoryImp;
-import Service.TodoListServiceImp;
+import Entity.LoginRegister;
+import Repository.LoginRegisterRepositoryImp;
+import Service.LoginRegisterServiceImp;
 
 public class testTodoListServiceImp {
     public static void main(String[] args) {
-        TodoListRepositoryImp todoListRepositoryImp = new TodoListRepositoryImp();
-        TodoListServiceImp todoListServiceImp = new TodoListServiceImp(todoListRepositoryImp);
+        LoginRegisterRepositoryImp loginRegisterRepositoryImp = new LoginRegisterRepositoryImp();
+        LoginRegisterServiceImp loginRegisterServiceImp = new LoginRegisterServiceImp(loginRegisterRepositoryImp);
 
-        Categories categories = Categories.INFORMATIONAL;
-
-
-        todoListServiceImp.ShowTodoListService();
-
-
-        todoListServiceImp.RemoveTodoListService(1);
-
-        todoListServiceImp.ShowTodoListService();
+        loginRegisterServiceImp.registerUser(new LoginRegister("Agung","Agung123"));
+        loginRegisterServiceImp.loginService("Agung","Agung123");
     }
 }

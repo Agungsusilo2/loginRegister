@@ -1,17 +1,18 @@
 package Test;
 
-import Repository.TodoListRepositoryImp;
-import Service.TodoListServiceImp;
-import View.ViewTodoList;
+
+import Repository.LoginRegisterRepositoryImp;
+import Service.LoginRegisterServiceImp;
+import View.ViewLoginRegister;
 
 public class testTodoListView {
 
 
     public static void main(String[] args) {
-        TodoListRepositoryImp todoListRepositoryImp = new TodoListRepositoryImp();
-        TodoListServiceImp todoListServiceImp = new TodoListServiceImp(todoListRepositoryImp);
-        ViewTodoList viewTodoList = new ViewTodoList(todoListServiceImp);
+        LoginRegisterRepositoryImp todoListRepositoryImp = new LoginRegisterRepositoryImp();
+        LoginRegisterServiceImp todoListServiceImp = new LoginRegisterServiceImp(todoListRepositoryImp);
+        ViewLoginRegister viewTodoList = new ViewLoginRegister(todoListServiceImp);
 
-        viewTodoList.viewTodoList();
+        viewTodoList.viewLoginRegister();
     }
 }
